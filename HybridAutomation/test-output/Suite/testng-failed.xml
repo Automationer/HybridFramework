@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="testCases.VerifyLoginPage"/>
+      <class name="testCases.VerifyLoginPageWithReport"/>
+      <class name="testCases.VerifyLoginPageWithReport1"/>
+      <class name="testCases.VerifyHomePage"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="testCases.VerifyLoginPage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testHomePage"/>
+          <include name="setUP"/>
+        </methods>
+      </class> <!-- testCases.VerifyLoginPage -->
+      <class name="testCases.VerifyHomePage">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUP"/>
+        </methods>
+      </class> <!-- testCases.VerifyHomePage -->
+      <class name="testCases.VerifyLoginPageWithReport">
+        <methods>
+          <include name="setUP"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.VerifyLoginPageWithReport -->
+      <class name="testCases.VerifyLoginPageWithReport1">
+        <methods>
+          <include name="setUP"/>
+          <include name="testHomePage"/>
+        </methods>
+      </class> <!-- testCases.VerifyLoginPageWithReport1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
